@@ -1,15 +1,243 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
+import Heading from '../components/Heading.astro';
+import Text from '../components/Text.astro'; 
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import portrait from '../assets/images/portrait.png';
+import me_1 from '../assets/images/me_1.png';
+import me_2 from '../assets/images/me_2.png';
+
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+<MainLayout title="Digital Application">
+<section
+  class="flex justify-center items-center w-full h-1/2 text-center"
+  style={{ backgroundColor: 'var(--color-secondary-900)' }} 
+>
+  <Heading
+    htmlheading="h1"
+    size="large"
+    font="overskrift"
+    stylingclasses="text-white text-blink"
+  >
+    <br>
+      HELENA <br />
+      MØLLER <br />
+      TROLAND
+      <br>
+      <br>
+  </Heading>
+</section>
+<br>
+
+<section class="relative flex justify-center items-center py-20">
+  <div class="absolute inset-0 flex flex-col justify-center space-y-6">
+    <div class="hidden sm:block w-full h-3 bg-[var(--color-secondary-900)]"></div>
+    <div class="hidden sm:block w-full h-3 bg-[var(--color-secondary-900)]"></div>
+    <div class="hidden sm:block w-full h-3 bg-[var(--color-secondary-900)]"></div>
+    <div class="hidden sm:block w-full h-3 bg-[var(--color-secondary-900)]"></div>
+    <div class="hidden sm:block w-full h-3 bg-[var(--color-secondary-900)]"></div>
+    <div class="hidden sm:block w-full h-3 bg-[var(--color-secondary-900)]"></div>
+    <div class="hidden sm:block w-full h-3 bg-[var(--color-secondary-900)]"></div>
+    <div class="hidden sm:block w-full h-3 bg-[var(--color-secondary-900)]"></div>
+    <div class="hidden sm:block w-full h-3 bg-[var(--color-secondary-900)]"></div>
+    <div class="hidden sm:block w-full h-3 bg-[var(--color-secondary-900)]"></div>
+
+    <div class="block sm:hidden w-full h-1 bg-[var(--color-secondary-900)]"></div>
+    <div class="block sm:hidden w-full h-1 bg-[var(--color-secondary-900)]"></div>
+    <div class="block sm:hidden w-full h-1 bg-[var(--color-secondary-900)]"></div>
+    <div class="block sm:hidden w-full h-1 bg-[var(--color-secondary-900)]"></div>
+    <div class="block sm:hidden w-full h-1 bg-[var(--color-secondary-900)]"></div>
+    <div class="block sm:hidden w-full h-1 bg-[var(--color-secondary-900)]"></div>
+    <div class="block sm:hidden w-full h-1 bg-[var(--color-secondary-900)]"></div>
+  </div>
+
+  <Image
+    src={portrait}
+    alt="Portrait"
+    class="relative z-10 w-72 sm:w-96 md:w-[32rem]"
+  />
+</section>
+
+<section class="flex flex-col gap-8 px-8 md:px-20 py-0 md:py-10">
+  <div class="flex justify-center items-center text-center py-4 md:py-12">
+    <Heading
+      htmlheading="h2"
+      size="medium"
+      font="underoverskrift"
+      class="text-center"
+    >
+      General Information
+    </Heading>
+  </div>
+
+  <div class="flex flex-col md:flex-row gap-6 items-stretch mt-12 md:mt-16">
+    <div class="flex-1 p-8 md:p-12" style="background-color: var(--color-secondary-900); color: var(--color-accent-900);">
+      <h3 class="font-underoverskrift text-xl md:text-2xl text-center">About Me</h3>
+      <Text>
+        My name is Helena, I am 23 years old, and I live in Vesterbro, Copenhagen. I am currently in my third semester as a Multimedia Design student at EK. Alongside my studies, I work at Norr, a large clothing and interior store in central Copenhagen.
+      </Text>
+    </div>
+
+    <div class="flex-1 p-8 md:p-12" style="background-color: var(--color-primary-900); color: var(--color-accent-900);">
+      <h3 class="font-underoverskrift text-xl md:text-2xl text-center">My Resume</h3>
+      <Text>2021–2023: Bar Manager, Joe & The Juice</Text>
+      <Text>2023–2024: Sales Assistant, Wunderwear (part time)</Text>
+      <Text>2023–2024: Substitute Teacher, Bagsværd School (part time)</Text>
+      <Text>2024–Present: Sales Assistant, Norr (part time)</Text>
+    </div>
+
+    <div class="flex-1 p-8 md:p-12" style="background-color: var(--color-secondary-900); color: var(--color-accent-900);">
+      <h3 class="font-underoverskrift text-xl md:text-2xl text-center">Interests</h3>
+      <Text>
+        I enjoy spending my free time with friends and family and value being social. When I need some time for myself, I like to focus on creative projects, such as painting and doing nails on myself and others. I also enjoy going on long walks to unwind and recharge.
+      </Text>
+    </div>
+  </div>
+</section>
+
+<section class="relative w-full py-12">
+  <div class="flex flex-col w-full">
+    <div class="h-10 w-full bg-[var(--color-secondary-900)]"></div>
+    <div class="h-10 w-full bg-[var(--color-secondary-900)]"></div>
+    <div class="h-10 w-full bg-[var(--color-primary-900)]"></div>
+    <div class="h-10 w-full bg-[var(--color-primary-900)]"></div>
+    <div class="h-10 w-full bg-[var(--color-secondary-900)]"></div>
+    <div class="h-10 w-full bg-[var(--color-secondary-900)]"></div>
+    <div class="h-10 w-full bg-[var(--color-primary-900)]"></div>
+    <div class="h-10 w-full bg-[var(--color-primary-900)]"></div>
+  </div>
+
+  <div class="absolute inset-0 marquee-wrapper flex items-center">
+    <div class="marquee-content">
+      {Array(20).fill(0).map(() => (
+        <Heading htmlheading="h1" size="large" font="overskrift" stylingclasses="text-white marquee-item">
+          LERTRO
+        </Heading>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="py-12 flex flex-col items-center gap-4 px-4 sm:px-6 md:px-10">
+  <div class="flex justify-center items-center text-center mb-4 py-4 md:py-12">
+    <Heading
+      htmlheading="h2"
+      size="medium"
+      font="underoverskrift"
+      class="text-center"
+    >
+      What I am Looking For
+    </Heading>
+  </div>
+
+  <div class="max-w-2xl w-full p-8 md:p-12" style="border: 2px solid var(--color-primary-900);">
+    <Text>
+      As I reach the 4th semester of my Multimedia Design studies at EK, I am required to complete a 10-week internship. I am seeking an unpaid position from 26 January to 1 April 2026, with a workload of 37 hours per week.
+    </Text>
+  </div>
+</section>
+
+<section class="py-10">
+  <div class="flex flex-col w-full">
+    <div class="h-6 w-full bg-[var(--color-secondary-900)]"></div>
+  </div>
+</section>
+
+<section class="py-12 px-4 md:px-16">
+  <div class="flex justify-center items-center text-center mb-8 py-4 md:py-12">
+    <Heading
+      htmlheading="h2"
+      size="medium"
+      font="underoverskrift"
+      class="text-center"
+    >
+      Qualifications
+    </Heading>
+  </div>
+
+  <div class="flex flex-col md:flex-row gap-6 items-stretch">
+    <div class="flex-1 flex flex-col p-6 border-2 border-black">
+      <h3 class="font-underoverskrift text-xl md:text-2xl text-center mb-2 min-h-[4rem]">Graphic Design & Visual Communication</h3>
+      <Text class="flex-1">
+        I have hands-on experience creating layouts for digital media, with a strong foundation in typography and design principles. I can develop visual identities and brand materials that communicate ideas clearly and consistently. My work involves using Figma and Adobe Illustrator to design user interfaces, digital graphics, and marketing assets, ensuring that each project is both visually appealing and functional.
+      </Text>
+    </div>
+
+    <div class="flex-1 flex flex-col p-6 border-2 border-black">
+      <h3 class="font-underoverskrift text-xl md:text-2xl text-center mb-2 min-h-[4rem]">Web & Digital Platforms</h3>
+      <Text class="flex-1">
+        I design responsive layouts using HTML, CSS, and Astro in VS Code, creating digital experiences that are both functional and visually engaging. I focus on structuring and styling web pages to ensure usability and visual clarity, while continuously refining my skills in modern web development tools and techniques.
+      </Text>
+    </div>
+
+    <div class="flex-1 flex flex-col p-6 border-2 border-black">
+      <h3 class="font-underoverskrift text-xl md:text-2xl text-center mb-2 min-h-[4rem]">Social Media & Content Creation</h3>
+      <Text class="flex-1">
+        I can create visual content for social media and other digital projects, designing graphics and posts that communicate ideas clearly and effectively. I can use tools such as Canva and Premiere Pro to produce visually appealing materials, and I am continuously developing my skills to create content that is both engaging and professional.
+      </Text>
+    </div>
+
+    <div class="flex-1 flex flex-col p-6 border-2 border-black">
+      <h3 class="font-underoverskrift text-xl md:text-2xl text-center mb-2 min-h-[4rem]">Creative Process & Project Work</h3>
+     <Text class="flex-1">
+  I actively contribute to team projects by generating ideas, producing moodboards, and refining designs based on feedback. I collaborate effectively in team settings, participate in brainstorming sessions, and iterate on creative solutions to deliver polished, high-quality results. This allows me to strengthen both my design skills and my ability to work well with others.
+</Text>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="py-10">
+  <div class="flex flex-col w-full">
+    <div class="h-6 w-full bg-[var(--color-secondary-900)]"></div>
+  </div>
+</section>
+
+<section class="flex flex-col md:flex-row justify-center items-center py-12 gap-8">
+  <Image class="w-64 sm:w-80 md:w-96" src={me_1} alt="me_1" />
+  <Image class="w-64 sm:w-80 md:w-96" src={me_2} alt="me_2" />
+</section>
+
+<section class="py-10">
+  <div class="flex flex-col w-full">
+    <div class="h-6 w-full bg-[var(--color-secondary-900)]"></div>
+  </div>
+</section>
+
+<section class="mb-20 px-4">
+  <div class="flex justify-center items-center text-center mb-8 py-4 md:py-12">
+    <Heading htmlheading="h2" size="medium" font="underoverskrift" class="text-center">
+A Look Into Some Of My Work
+    </Heading>
+  </div>
+
+  <div class="bg-[var(--color-secondary-900)] p-12 md:p-16 flex flex-col items-center gap-4 rounded max-w-2xl mx-auto">
+    <Text>
+      <a href="https://instantday-team8.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-2xl font-bold text-[var(--color-accent-900)] hover:text-[var(--color-primary-900)] transition-colors duration-300 text-center">
+        Instant Day
+      </a>
+    </Text>
+
+    <Text>
+      <a href="https://hmt-card-project.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-2xl font-bold text-[var(--color-accent-900)] hover:text-[var(--color-primary-900)] transition-colors duration-300 text-center">
+        Business Card
+      </a>
+    </Text>
+
+	   <Text>
+      <a href="https://eksamensprojektfreds.netlify.app/om_freds/" target="_blank" rel="noopener noreferrer" class="text-2xl font-bold text-[var(--color-accent-900)] hover:text-[var(--color-primary-900)] transition-colors duration-300 text-center">
+        2. Semester Exam Project
+      </a>
+    </Text>
+
+    <Text>
+      <a href="https://trolandstudiorecipesite.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-2xl font-bold text-[var(--color-accent-900)] hover:text-[var(--color-primary-900)] transition-colors duration-300 text-center">
+        Recipe Site
+      </a>
+    </Text>
+  </div>
+</section>
+
 </MainLayout>

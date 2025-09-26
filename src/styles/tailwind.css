@@ -1,27 +1,87 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
+@font-face {
+  font-family: "Honk";
+  src: url("/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Domine";
+  src: url("/fonts/Domine-Regular.ttf") format("truetype");
+}
+
 @theme {
   /* Her tilføjes theme variable // tokens */
+
+  /*Farver */
+  --color-primary-900: #000000;
+  --color-secondary-900: #6b7280;
+  --color-accent-900: #ffffff;
+
+  /* Typografi */
+  --font-overskrift: "Anton";
+  --font-underoverskrift: "Instrument Serif";
+  --font-p: "Alumni Sans";
 }
 
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+  h3 {
+    font-family: var(--font-underoverskrift);
+    @apply text-xl md:text-2xl;
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+
+@layer utilities {
+}
+
+/* til navn h1*/
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  } /* synlig */
+  50% {
+    opacity: 0;
+  } /* usynlig */
+}
+
+.text-blink {
+  animation: blink 6s infinite ease-in-out;
+}
+
+/* til lertro h1 */
+@keyframes scrollRightInfinite {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap; /* sørger for at teksten ikke brydes */
+  animation: scrollRightInfinite 30s linear infinite;
+}
+.marquee-item {
+  margin-right: 4rem; /* afstand mellem gentagelser */
 }
